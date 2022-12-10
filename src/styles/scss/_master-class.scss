@@ -1,0 +1,146 @@
+.master-class {
+    padding: 41px 0 61px;
+
+    @media (max-width: 1919px) {
+        padding: 35px 0 64px;
+    }
+
+    @media (max-width: 767px) {
+        padding: 30px 0 51px;
+    }
+
+    &__container {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+
+        @media (max-width: 767px) {
+            grid-template-columns: 1fr;
+            gap: 34px;
+        }
+    }
+
+    &__intro {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        position: relative;
+        padding: 68px 60px;
+        background-image: url('../img/master-class-bg.webp');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @media (max-width: 1919px) {
+            padding: 35px 30px;
+        }
+
+        @media (max-width: 767px) {
+            padding: 29px 30px;
+            min-height: 422px;
+        }
+    }
+}
+
+.intro {
+    &__type {
+        top: 15px;
+        right: 15px;
+
+        @media (max-width: 767px) {
+            top: 6px;
+            right: 5px;
+        }
+    }
+
+    &__descr {
+        margin-bottom: 3px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: $color-white;
+
+        @media (max-width: 1023px) {
+            margin-bottom: 13px;
+        }
+
+        @media (max-width: 767px) {
+            margin-bottom: 9px;
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 19px;
+        font-family: 'TT Firs Neue';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 104%;
+        color: $color-white;
+
+        @media (max-width: 1023px) {
+            margin-bottom: 23px;
+            font-size: 34px;
+            line-height: 90%;
+        }
+
+        @media (max-width: 767px) {
+            margin-bottom: 14px;
+            font-size: 24px;
+            line-height: 110%;
+        }
+    }
+}
+
+.works {
+    &__title {
+        margin-bottom: 18px;
+        font-family: 'TT Firs Neue';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 104%;
+        color: $color-black;
+
+        @media (max-width: 1023px) {
+            margin-bottom: 11px;
+        }
+
+        @media (max-width: 767px) {
+            font-size: 18px;
+        }
+    }
+
+    &__list {
+        grid-template-areas:
+            "work1 work1"
+            "work2 work3";
+        gap: 30px;
+
+        @media (max-width: 1023px) {
+            row-gap: 25px;
+        }
+    }
+}
+
+.list-works {
+    &__item:nth-child(1) {
+        grid-area: work1;
+    }
+
+    &__item:nth-child(2) {
+        grid-area: work2;
+    }
+
+    &__item:nth-child(3) {
+        grid-area: work3;
+    }
+
+    &__work img {
+        height: 100%;
+    }
+}

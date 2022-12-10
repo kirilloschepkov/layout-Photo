@@ -1,0 +1,211 @@
+.header {
+    padding: 24px 0;
+    background-color: $color-black;
+
+    @media (max-width: 1919px) {
+        padding: 24px 0 27px;
+    }
+
+    @media (max-width: 1023px) {
+        padding: 24px 0 73px;
+    }
+
+    @media (max-width: 767px) {
+        padding: 26px 0 65px;
+    }
+
+    &__container {
+        position: relative;
+        grid-template-columns: 3fr 7fr 2fr;
+
+        @media (max-width: 1023px) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    &__burger {
+        display: none;
+
+        @media (max-width: 767px) {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -65px;
+            padding: 14px 21px 9px;
+            text-align: left;
+            color: $color-white;
+            background-color: $color-grey-dark;
+        }
+    }
+
+    &__search {
+        justify-content: flex-end;
+        align-items: center;
+        position: relative;
+    }
+
+    &__nav {
+        & div {
+            height: 100%;
+        }
+
+        @media (max-width: 1023px) {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -72px;
+            padding: 12px 27px;
+            background-color: $color-grey-dark;
+        }
+
+        @media (max-width: 767px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: absolute;
+            top: 44px;
+            padding: 10px 21px;
+            height: 100vh;
+            background-color: $color-black;
+            z-index: 1000;
+            overflow-y: auto;
+            visibility: hidden;
+            transform: translateX(-120%);
+            transition: visibility .3s ease-in-out, transform .3s ease-in-out;
+
+            &--active {
+                visibility: visible;
+                transform: none;
+            }
+
+            &--active .nav__tel {
+                display: block;
+            }
+        }
+    }
+}
+
+.nav {
+    &__list {
+        height: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: 767px) {
+            flex-direction: column;
+            align-items: flex-start;
+            height: initial;
+        }
+    }
+
+    &__item:not(:last-child) {
+        @media (max-width: 767px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__link {
+        font-family: 'TT Firs Neue';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px;
+        color: $color-white;
+        transition: color .3s ease-in-out, background-color .3s ease-in-out, box-shadow .3s ease-in-out;
+    }
+
+    &__exit {
+        display: none;
+
+        @media (max-width: 767px) {
+            display: block;
+            text-align: left;
+            margin-bottom: 16px;
+        }
+    }
+
+    &__tel {
+        display: none;
+    }
+}
+
+.search {
+
+    &__opening {
+        display: none;
+        position: absolute;
+        padding: 5px 0 5px 15px;
+        background-color: $color-black;
+
+        &--active {
+            display: flex;
+        }
+    }
+
+    &__input {
+        margin-right: 5px;
+        padding-right: 70px;
+        border: none;
+        border-bottom: 1px solid $color-very-light-grey;
+        background-color: inherit;
+        font-family: 'TT Firs Neue';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        color: $color-very-light-grey;
+        transition: border-color .3s ease-in-out;
+
+        &::-webkit-input-placeholder {
+            color: $color-very-light-grey;
+        }
+
+        &:-moz-placeholder {
+            color: $color-very-light-grey;
+        }
+
+        &::-moz-placeholder {
+            color: $color-very-light-grey;
+        }
+
+        &:-ms-input-placeholder {
+            color: $color-very-light-grey;
+        }
+    }
+
+    &__open svg {
+        width: 25px;
+        height: 25px;
+
+        @media (max-width: 767px) {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    &__exit svg {
+        width: 23px;
+        height: 23px;
+
+        @media (max-width: 767px) {
+            width: 18px;
+            height: 18px;
+        }
+    }
+}
+
+.logo {
+    width: 190px;
+    height: 30.7px;
+
+    @media (max-width: 1919px) {
+        width: 166px;
+        height: 26.8px;
+    }
+
+    @media (max-width: 767px) {
+        width: 111.5px;
+        height: 18px;
+    }
+}

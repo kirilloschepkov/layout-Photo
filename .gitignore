@@ -1,4 +1,4 @@
 node_modules
 layouts
-src
-gulpfile.js
+dist
+.DS_Store

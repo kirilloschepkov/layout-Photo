@@ -1,0 +1,178 @@
+.btn {
+    &:focus {
+        outline-offset: -3px;
+        outline: 3px solid $color-vinous;
+    }
+
+    &:hover {
+        background-color: $color-orange-dark;
+    }
+
+    &:active {
+        background-color: $color-vinous;
+    }
+}
+
+.special-project .project__btn {
+    &:focus {
+        outline-offset: -3px;
+        outline: 3px solid $color-orange;
+        background-color: $color-orange-dark;
+    }
+
+    &:hover {
+        background-color: $color-orange;
+    }
+
+    &:active {
+        background-color: $color-vinous;
+    }
+}
+
+.nav__link {
+    &:focus {
+        outline: none;
+        background-color: $color-orange-dark;
+        box-shadow: -5px 0 0 $color-orange-dark, 5px 0 0 $color-orange-dark;
+    }
+
+    &:hover {
+        color: $color-orange;
+    }
+
+    &:active {
+        background-color: initial;
+        box-shadow: none;
+        color: $color-vinous;
+    }
+}
+
+.search__input {
+    &:focus {
+        outline: none;
+        border-color: $color-orange;
+    }
+
+    &:hover {
+        border-color: $color-orange;
+    }
+
+    &:active {
+        border-color: $color-vinous;
+    }
+}
+
+.about-us__form input {
+    &:focus {
+        outline-offset: -1px;
+        outline: 1px solid $color-orange;
+    }
+
+    &:hover::-webkit-input-placeholder {
+        color: $color-orange;
+    }
+
+    &:hover:-moz-placeholder {
+        color: $color-orange;
+    }
+
+    &:hover::-moz-placeholder {
+        color: $color-orange;
+    }
+
+    &:hover:-ms-input-placeholder {
+        color: $color-orange;
+    }
+
+    &.just-validate-error-field {
+        outline-offset: -1px;
+        outline: 1px solid $color-crimson;
+    }
+}
+
+.about-us {
+    & .just-validate-error-label {
+        position: absolute;
+        left: 23px;
+        top: 4px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 9px;
+        line-height: 11px;
+        color: #FF3030 !important;
+    }
+}
+
+.contacts-form input,
+.contacts-form textarea {
+    &:focus {
+        outline-offset: -1px;
+        outline: 1px solid $color-orange;
+    }
+
+    &:hover::-webkit-input-placeholder {
+        color: $color-orange;
+    }
+
+    &:hover:-moz-placeholder {
+        color: $color-orange;
+    }
+
+    &:hover::-moz-placeholder {
+        color: $color-orange;
+    }
+
+    &:hover:-ms-input-placeholder {
+        color: $color-orange;
+    }
+
+    &.just-validate-error-field {
+        outline-offset: -1px;
+        outline: 1px solid $color-crimson;
+    }
+}
+
+.contacts__form {
+    & .just-validate-error-label {
+        position: absolute;
+        left: 23px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 9px;
+        line-height: 11px;
+        color: #FF3030 !important;
+    }
+
+    & .just-validate-error-label:nth-last-child(3) {
+        top: 106px;
+    }
+
+    & .just-validate-error-label:nth-last-child(2) {
+        top: 174px;
+    }
+
+    & .just-validate-error-label:nth-last-child(1) {
+        top: 243px;
+    }
+}
+
+.footer__link {
+
+    &:focus {
+        outline: none;
+    }
+
+    &:focus path {
+        fill: $color-orange-dark;
+    }
+
+    &:hover path {
+        fill: $color-orange;
+    }
+
+    &:active path {
+        fill: $color-vinous;
+    }
+}

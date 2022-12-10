@@ -1,0 +1,97 @@
+.footer {
+    padding: 25px 0 15px;
+    background-color: $color-black;
+
+    @media (max-width: 767px) {
+            padding: 31px 0 15px;
+    }
+
+    &__container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+
+        @media (max-width: 1919px) {
+            grid-template-columns: repeat(2, 3fr) 2fr;
+            gap: 0;
+        }
+
+        @media (max-width: 1023px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 767px) {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+    }
+
+    &__logo {
+        display: inline-block;
+        margin-bottom: 7px;
+
+        @media (max-width: 1919px) {
+            margin-top: 5px;
+        }
+    }
+
+    &__company {
+        font-family: 'TT Firs Neue';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        color: $color-very-light-grey;
+
+        @media (max-width: 767px) {
+            font-size: 10px;
+            line-height: 13px;
+        }
+    }
+
+    &__quote {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 138%;
+        color: $color-light-grey;
+
+        @media (max-width: 1023px) {
+            display: none;
+        }
+    }
+
+    &__social {
+        justify-self: end;
+
+        @media (max-width: 767px) {
+            margin-bottom: 35px;
+            justify-self: center;
+            order: -1;
+        }
+    }
+
+    &__wrapper {
+        text-align: center;
+    }
+
+    &__social-text {
+        margin-bottom: 8px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 138%;
+        color: $color-light-grey;
+    }
+
+    &__link:not(:last-child) {
+        display: inline-block;
+        margin-right: 20px;
+    }
+
+    &__link path {
+        fill: $color-light-grey;
+        transition: fill .3s ease-in-out;
+    }
+}

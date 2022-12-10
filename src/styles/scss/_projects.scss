@@ -1,0 +1,239 @@
+.projects {
+    padding: 68px 0 34px;
+
+    @media (max-width: 767px) {
+        padding: 50px 0 34px;
+    }
+
+    &__title {
+        margin-bottom: 12px;
+        font-family: 'TT Firs Neue';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 31px;
+        color: #202020;
+
+        @media (max-width: 767px) {
+            margin-bottom: 16px;
+            font-size: 18px;
+            line-height: 23px;
+        }
+    }
+
+    &__list {
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "project1 project1 project2 project2 project3 project3 project4 project4 project4 project4 project4 project4"
+            "project5 project5 project5 project5 project5 project5 project6 project6 project6 project7 project7 project7";
+        column-gap: 30px;
+        row-gap: 24px;
+
+        @media (max-width: 1919px) {
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: 0.317fr repeat(2, 0.3415fr);
+            grid-template-areas:
+                "project1 project1 project2 project2 project3 project3 project3 project3"
+                "project4 project4 project4 project4 project4 project6 project6 project6"
+                "project7 project7 project7 project5 project5 project5 project5 project5";
+        }
+
+        @media (max-width: 1023px) {
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-areas:
+                "project1 project1 project2 project2 project3 project3"
+                "project4 project4 project4 project4 project4 project4"
+                "project6 project6 project6 project7 project7 project7"
+                "project5 project5 project5 project5 project5 project5";
+        }
+
+        @media (max-width: 767px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: initial;
+            grid-template-areas:
+                "project1"
+                "project2"
+                "project3"
+                "project4"
+                "project6"
+                "project7"
+                "project5";
+        }
+    }
+}
+
+.list-projects {
+    &__article {
+        flex-direction: column;
+        justify-content: space-between;
+
+        @media (max-width: 1919px) {
+            min-height: 285px;
+        }
+
+        @media (max-width: 767px) {
+            min-height: 278px;
+        }
+    }
+
+    &__item:nth-child(1) {
+        grid-area: project1;
+    }
+
+    &__item:nth-child(2) {
+        grid-area: project2;
+    }
+
+    &__item:nth-child(3) {
+        grid-area: project3;
+    }
+
+    &__item:nth-child(4) {
+        grid-area: project4;
+    }
+
+    &__item:nth-child(5) {
+        grid-area: project5;
+    }
+
+    &__item:nth-child(6) {
+        grid-area: project6;
+    }
+
+    &__item:nth-child(7) {
+        grid-area: project7;
+    }
+}
+
+.project {
+    position: relative;
+    height: 100%;
+
+    &__type {
+        top: 7px;
+        right: 7px;
+
+        @media (max-width: 767px) {
+            top: 5px;
+            right: 5px;
+            padding: 4px 14px;
+        }
+    }
+
+    &__img {
+        & img {
+            margin-bottom: 14px;
+        }
+    }
+
+    &__descr {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 138%;
+        color: $color-black;
+        -webkit-line-clamp: 3;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+
+
+        @media (max-width: 1919px) {
+            -webkit-line-clamp: 2;
+        }
+
+        @media (max-width: 1023px) {
+            -webkit-line-clamp: 3;
+        }
+
+        @media (max-width: 767px) {
+            -webkit-line-clamp: 2;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__date {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 22px;
+        color: $color-grey;
+    }
+
+    .special-project &__data {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 23px 30px 34px;
+
+        @media (max-width: 1919px) {
+            padding: 30px 30px 34px;
+        }
+
+        @media (max-width: 767px) {
+            justify-content: flex-end;
+            padding: 23px 30px 37px;
+        }
+    }
+
+    .special-project &__title {
+        margin-bottom: 5px;
+        width: 40%;
+        font-family: 'TT Firs Neue';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 24px;
+        color: $color-white;
+
+        @media (max-width: 767px) {
+            margin-bottom: 9px;
+        }
+    }
+
+    .special-project &__descr {
+        margin-bottom: auto;
+        width: 51.5%;
+        color: $color-white;
+        -webkit-line-clamp: initial;
+        display: initial;
+        -webkit-box-orient: initial;
+        overflow: initial;
+
+        @media (max-width: 767px) {
+            margin-bottom: 17px;
+            width: 100%;
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+
+    .special-project &__btn {
+        padding: 13px 19px;
+        background-color: $color-transparent;
+        border: 3px solid $color-orange;
+
+        @media (max-width: 767px) {
+            padding: 7px 13px;
+        }
+    }
+
+    .special-project &__img img {
+        height: 100%;
+        margin-bottom: 0;
+    }
+
+    .special-project &__date {
+        margin-bottom: 2px;
+    }
+}
