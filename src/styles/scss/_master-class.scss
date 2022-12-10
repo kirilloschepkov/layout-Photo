@@ -26,18 +26,24 @@
         align-items: flex-start;
         position: relative;
         padding: 68px 60px;
-        background-image: url('../img/master-class-bg.webp');
+        background-image: url('../img/master-class-bg_1920.webp');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
 
         @media (max-width: 1919px) {
             padding: 35px 30px;
+            background-image: url('../img/master-class-bg_1024.webp');
+        }
+
+        @media (max-width: 1023px) {
+            background-image: url('../img/master-class-bg_768.webp');
         }
 
         @media (max-width: 767px) {
             padding: 29px 30px;
             min-height: 422px;
+            background-image: url('../img/master-class-bg_320.webp');
         }
     }
 }

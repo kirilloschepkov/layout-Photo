@@ -79,3 +79,18 @@
         line-height: 18px;
     }
 }
+
+.logo {
+    width: 191px;
+    height: 30.7px;
+
+    @media (max-width: 1919px) {
+        width: 166px;
+        height: 26.8px;
+    }
+
+    @media (max-width: 767px) {
+        width: 111.5px;
+        height: 18px;
+    }
+}

@@ -75,8 +75,7 @@ const images = () => {
 //export other images
 const imagesOther = () => {
   return src([
-    './src/img/*.svg',
-    './src/img/default/*.{jpg,jpeg,png}',
+    './src/img/default/*.{jpg,jpeg,png,svg}',
     './src/img/favicon/*'
   ])
     .pipe(dest('./dist/img'))
