@@ -1,5 +1,5 @@
 .contacts {
-    padding: 22px 0 75px;
+    padding: 22px 0 77px;
 
     @media (max-width: 1919px) {
         padding: 27px 0 65px;
@@ -48,6 +48,7 @@
     &__wrapper {
         grid-template-columns: 2fr 1fr;
         gap: 25px;
+        font-size: 0;
 
         @media (max-width: 1919px) {
             grid-template-columns: 0.63441fr 0.36774fr;

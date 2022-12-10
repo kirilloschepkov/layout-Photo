@@ -56,6 +56,7 @@ a {
 
 img {
   width: 100%;
+  max-width: 100%;
 }
 
 body {
@@ -373,7 +374,7 @@ p {
 }
 
 .master-class {
-  padding: 41px 0 61px;
+  padding: 41px 0 68px;
 }
 @media (max-width: 1919px) {
   .master-class {
@@ -388,6 +389,7 @@ p {
 .master-class__container {
   grid-template-columns: 1fr 1fr;
   gap: 30px;
+  font-size: 0;
 }
 @media (max-width: 767px) {
   .master-class__container {
@@ -401,7 +403,7 @@ p {
   justify-content: flex-end;
   align-items: flex-start;
   position: relative;
-  padding: 68px 60px;
+  padding: 60px;
   background-image: url("../img/master-class-bg_1920.webp");
   background-position: center;
   background-repeat: no-repeat;
@@ -482,7 +484,7 @@ p {
 }
 
 .works__title {
-  margin-bottom: 18px;
+  margin-bottom: 19px;
   font-family: "TT Firs Neue";
   font-style: normal;
   font-weight: 700;
@@ -518,9 +520,6 @@ p {
 }
 .list-works__item:nth-child(3) {
   grid-area: work3;
-}
-.list-works__work img {
-  height: 100%;
 }
 
 .about-us {
@@ -584,6 +583,8 @@ p {
 }
 .about-us__photo img {
   margin-bottom: 17px;
+  max-width: 630px;
+  min-height: 255px;
 }
 @media (max-width: 767px) {
   .about-us__photo img {
@@ -651,7 +652,7 @@ p {
 }
 
 .projects {
-  padding: 68px 0 34px;
+  padding: 68px 0 38px;
 }
 @media (max-width: 767px) {
   .projects {
@@ -678,8 +679,8 @@ p {
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-template-areas: "project1 project1 project2 project2 project3 project3 project4 project4 project4 project4 project4 project4" "project5 project5 project5 project5 project5 project5 project6 project6 project6 project7 project7 project7";
-  column-gap: 30px;
-  row-gap: 24px;
+  gap: 30px;
+  font-size: 0;
 }
 @media (max-width: 1919px) {
   .projects__list {
@@ -746,6 +747,7 @@ p {
 .project__type {
   top: 7px;
   right: 7px;
+  padding: 6px 14px;
 }
 @media (max-width: 767px) {
   .project__type {
@@ -755,7 +757,7 @@ p {
   }
 }
 .project__img img {
-  margin-bottom: 14px;
+  margin-bottom: 20px;
 }
 .project__descr {
   font-family: "Roboto";
@@ -849,7 +851,7 @@ p {
   }
 }
 .special-project .project__btn {
-  padding: 13px 19px;
+  padding: 12px 19px;
   background-color: rgba(0, 0, 0, 0);
   border: 3px solid #FF6E30;
 }
@@ -867,7 +869,7 @@ p {
 }
 
 .contacts {
-  padding: 22px 0 75px;
+  padding: 22px 0 77px;
 }
 @media (max-width: 1919px) {
   .contacts {
@@ -920,6 +922,7 @@ p {
 .contacts__wrapper {
   grid-template-columns: 2fr 1fr;
   gap: 25px;
+  font-size: 0;
 }
 @media (max-width: 1919px) {
   .contacts__wrapper {

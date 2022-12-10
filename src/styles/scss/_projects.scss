@@ -1,5 +1,5 @@
 .projects {
-    padding: 68px 0 34px;
+    padding: 68px 0 38px;
 
     @media (max-width: 767px) {
         padding: 50px 0 34px;
@@ -27,8 +27,8 @@
         grid-template-areas:
             "project1 project1 project2 project2 project3 project3 project4 project4 project4 project4 project4 project4"
             "project5 project5 project5 project5 project5 project5 project6 project6 project6 project7 project7 project7";
-        column-gap: 30px;
-        row-gap: 24px;
+        gap: 30px;
+        font-size: 0;
 
         @media (max-width: 1919px) {
             grid-template-columns: repeat(8, 1fr);
@@ -114,6 +114,7 @@
     &__type {
         top: 7px;
         right: 7px;
+        padding: 6px 14px;
 
         @media (max-width: 767px) {
             top: 5px;
@@ -122,10 +123,8 @@
         }
     }
 
-    &__img {
-        & img {
-            margin-bottom: 14px;
-        }
+    &__img img {
+        margin-bottom: 20px;
     }
 
     &__descr {
@@ -219,7 +218,7 @@
     }
 
     .special-project &__btn {
-        padding: 13px 19px;
+        padding: 12px 19px;
         background-color: $color-transparent;
         border: 3px solid $color-orange;
 

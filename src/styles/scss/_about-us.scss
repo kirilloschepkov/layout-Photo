@@ -56,6 +56,8 @@
 
     &__photo img {
         margin-bottom: 17px;
+        max-width: 630px;
+        min-height: 255px;
 
         @media (max-width: 767px) {
             margin-bottom: 22px;
