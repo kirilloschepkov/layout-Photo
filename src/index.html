@@ -32,39 +32,40 @@
     <header class="header">
         <div class="header__container container grid">
             <a href="#" class="header__logo logo">
-                <img src="img/logo.svg" alt="Логотип">
+                <img src="img/logo.svg" alt="Логотип" aria-label="Ссылка на главную страницу">
             </a>
-            <button class="header__burger burger">
+            <button class="header__burger burger" aria-label="Кнопка открытия меню навигации">
                 <svg width="20" height="18">
                     <use xlink:href="img/sprite.svg#burger"></use>
                 </svg>
             </button>
             <nav class="header__nav nav" title="Главное меню">
                 <div class="wrapper">
-                    <button class="nav__exit">
+                    <button class="nav__exit" aria-label="Кнопка закрытия меню навигации">
                         <svg width="18" height="18">
                             <use xlink:href="img/sprite.svg#exit"></use>
                         </svg>
                     </button>
                     <ul class="nav__list flex">
                         <li class="nav__item">
-                            <a href="#about-us" class="nav__link">О&nbsp;студии</a>
+                            <a href="#about-us" class="nav__link" aria-label="Ссылка на раздел 'О студии'">О&nbsp;студии</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#projects" class="nav__link">Наши проекты</a>
+                            <a href="#projects" class="nav__link" aria-label="Ссылка на раздел 'Проекты'">Наши проекты</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#services" class="nav__link">Услуги</a>
+                            <a href="#services" class="nav__link" aria-label="Ссылка на раздел 'Услуги'">Услуги</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#master-class" class="nav__link">Мастер-классы</a>
+                            <a href="#master-class" class="nav__link"
+                                aria-label="Ссылка на раздел 'Мастер-класс'">Мастер-классы</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#contacts" class="nav__link">Контакты</a>
+                            <a href="#contacts" class="nav__link" aria-label="Ссылка на раздел 'Контакты'">Контакты</a>
                         </li>
                     </ul>
                 </div>
-                <a class="nav__tel tel" href="tel:+749542423532">
+                <a class="nav__tel tel" href="tel:+749542423532" aria-label="Ссылка для звонка по номеру">
                     <svg width="22" height="22">
                         <use xlink:href="img/sprite.svg#tel"></use>
                     </svg>
@@ -73,14 +74,15 @@
             </nav>
             <div class="header__search search flex">
                 <div class="search__opening">
-                    <input type="text" class="search__input" placeholder="Что будем иcкать?">
-                    <button class="search__exit">
+                    <input type="text" class="search__input" placeholder="Что будем иcкать?"
+                        aria-label="Введите ключевые слова для поиска по сайту">
+                    <button class="search__exit" aria-label="Кнопка закрытия поиска по сайту">
                         <svg>
                             <use xlink:href="img/sprite.svg#exit"></use>
                         </svg>
                     </button>
                 </div>
-                <button class="search__open">
+                <button class="search__open" aria-label="Кнопка открыть поиска по сайту">
                     <svg>
                         <use xlink:href="img/sprite.svg#search"></use>
                     </svg>
@@ -101,7 +103,7 @@
                     <h1 class="intro__title">
                         Неоновый фотосет 2.0<br>7&nbsp;июля 20:00
                     </h1>
-                    <button class="intro__btn btn">
+                    <button class="intro__btn btn" aria-label="Кнопка узнать больше">
                         Узнать больше
                     </button>
                 </div>
@@ -177,8 +179,9 @@
                             Подписаться на рассылку
                         </p>
                         <form action="#" class="about-us__form flex">
-                            <input type="email" name="email" placeholder="Email" class="about-us__input-email">
-                            <button class="about-us__btn btn">
+                            <input type="email" name="email" placeholder="Email" class="about-us__input-email"
+                                aria-label="Введите электронную почту">
+                            <button class="about-us__btn btn" aria-label="Кнопка отправить">
                                 Отправить
                             </button>
                         </form>
@@ -306,7 +309,7 @@
                                 <p class="project__descr">
                                     В&nbsp;рамках спецификации современных стандартов, интерактивные прототипы
                                 </p>
-                                <button class="project__btn btn">
+                                <button class="project__btn btn" aria-label="Кнопка узнать подробнее о проекте">
                                     О&nbsp;проекте
                                 </button>
                             </div>
@@ -340,7 +343,7 @@
                                 <p class="project__descr">
                                     Играет важную роль в&nbsp;формировании глубокомысленных рассуждений
                                 </p>
-                                <button class="project__btn btn">
+                                <button class="project__btn btn" aria-label="Узнать подробнее о проекте">
                                     О&nbsp;проекте
                                 </button>
                             </div>
@@ -423,7 +426,7 @@
                                     107045, Москва, Даев переулок, дом&nbsp;41, бизнес-центр &laquo;Даев Плаза&raquo;,
                                     этаж&nbsp;8, офис &#8470;&nbsp;82
                                 </address>
-                                <a class="data__tel tel" href="tel:+749542423532">
+                                <a class="data__tel tel" href="tel:+749542423532" aria-label="Ссылка для звонка по номеру">
                                     <svg width="22" height="22">
                                         <use xlink:href="img/sprite.svg#tel"></use>
                                     </svg>
@@ -445,7 +448,7 @@
                         <input type="email" name="email" placeholder="Email" class="contacts-form__input-email">
                         <textarea name="message" placeholder="Комментарий"
                             class="contacts-form__input-message"></textarea>
-                        <button class="contacts-form__btn btn">
+                        <button class="contacts-form__btn btn" aria-label="Кнопка отправки заявки">
                             Отправить
                         </button>
                     </form>
@@ -456,7 +459,7 @@
     <footer class="footer">
         <div class="footer__container container grid">
             <div class="wrapper">
-                <a href="#" class="footer__logo logo">
+                <a href="#" class="footer__logo logo" aria-label="Ссылка на главную страницу">
                     <img src="img/logo.svg" alt="Логотип">
                 </a>
                 <p class="footer__company">Фотостудия High pass<sup class="reg">&reg;</sup> 2018&ndash;2020</p>
@@ -470,7 +473,7 @@
                     <p class="footer__social-text">
                         Больше интересного:
                     </p>
-                    <a href="#" class="footer__link">
+                    <a href="#" class="footer__link" aria-label="Ссылка на нашу страницу в одноклассники">
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_41399_288)">
                                 <path
@@ -485,7 +488,7 @@
                             </defs>
                         </svg>
                     </a>
-                    <a href="#" class="footer__link">
+                    <a href="#" class="footer__link" aria-label="Ссылка на нашу страницу во вконтакте">
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M15 0C6.71601 0 0 6.7157 0 15C0 23.2843 6.71601 30 15 30C23.284 30 30 23.2843 30 15C30 6.7157 23.284 0 15 0ZM22.6088 16.6223C23.3079 17.3052 24.0476 17.9478 24.6752 18.7013C24.9533 19.0346 25.2154 19.3792 25.4148 19.7669C25.6996 20.3196 25.4425 20.9257 24.9477 20.9586L21.8747 20.958C21.081 21.0236 20.4494 20.7035 19.9169 20.1609C19.4919 19.7285 19.0975 19.2666 18.6881 18.8194C18.5208 18.6359 18.3447 18.4631 18.1347 18.3272C17.7158 18.0546 17.3518 18.1381 17.1118 18.5758C16.8672 19.0211 16.8114 19.5146 16.788 20.0102C16.7546 20.7348 16.5361 20.9242 15.809 20.9583C14.2555 21.031 12.7814 20.7953 11.4114 20.0121C10.2028 19.3212 9.26732 18.3462 8.45218 17.2423C6.86486 15.0902 5.64921 12.7283 4.55693 10.2985C4.3111 9.7513 4.49095 9.45852 5.09463 9.44716C6.0976 9.42783 7.10056 9.43028 8.10353 9.44624C8.51172 9.45268 8.78179 9.68624 8.93862 10.0714C9.48062 11.4049 10.1451 12.6737 10.9777 13.8503C11.1996 14.1637 11.4261 14.4761 11.7486 14.6974C12.1047 14.9417 12.376 14.861 12.5438 14.4635C12.6513 14.2109 12.6976 13.9409 12.7209 13.6702C12.8007 12.743 12.8102 11.8162 12.6721 10.8927C12.5862 10.3148 12.2612 9.94158 11.6851 9.83233C11.3917 9.77678 11.4347 9.66813 11.5774 9.50056C11.8251 9.21084 12.0571 9.03161 12.5208 9.03161L15.9928 9.031C16.5401 9.13841 16.6628 9.38394 16.7371 9.93514L16.7402 13.7936C16.7337 14.0069 16.8473 14.6391 17.2303 14.7787C17.5372 14.88 17.7398 14.6339 17.9233 14.4396C18.7559 13.556 19.3492 12.5131 19.8804 11.4338C20.1149 10.9577 20.3171 10.4652 20.5136 9.97166C20.6596 9.60675 20.8868 9.42721 21.2986 9.43335L24.6421 9.43734C24.7406 9.43734 24.8406 9.43826 24.9382 9.45514C25.5017 9.55151 25.6561 9.79396 25.4817 10.3436C25.2074 11.2073 24.6743 11.9266 24.1532 12.6479C23.5946 13.4201 22.9989 14.1652 22.4458 14.9408C21.9376 15.6497 21.9778 16.0066 22.6088 16.6223Z" />
