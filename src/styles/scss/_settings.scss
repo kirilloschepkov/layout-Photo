@@ -26,7 +26,9 @@ body {
 }
 
 ul {
-    @include list-reset;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 button {
@@ -36,9 +38,15 @@ button {
     cursor: pointer;
 }
 
+ul,
+ol,
+li,
+p,
 h1,
 h2,
 h3,
-p {
+h4,
+h5,
+h6 {
     margin: 0;
 }

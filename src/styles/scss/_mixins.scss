@@ -1,5 +1,17 @@
-@mixin list-reset {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+@mixin font-face($name, $file, $weight: 400, $style: normal) {
+	@font-face {
+		font-family: "#{$name}";
+		src: local("#{$file}"),
+		url('../fonts/#{$file}.woff2') format('woff2'),
+		url('../fonts/#{$file}.woff') format('woff');
+		font-weight: $weight;
+		font-style: $style;
+		font-display: swap;
+	}
+}
+
+@mixin bg-img ($size: 'cover', $position: 'center') {
+	background-size: #{$size};
+	background-position: #{$position};
+	background-repeat: no-repeat;
 }

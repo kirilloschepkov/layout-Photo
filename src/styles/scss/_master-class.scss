@@ -28,9 +28,7 @@
         position: relative;
         padding: 60px;
         background-image: url('../img/master-class-bg_1920.webp');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+        @include bg-img();
 
         @media (max-width: 1919px) {
             padding: 35px 30px;
