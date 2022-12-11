@@ -6,7 +6,7 @@ const uglify = require('gulp-uglify-es').default;
 const del = require('del');
 const browserSync = require('browser-sync').create();
 const svgSprite = require('gulp-svg-sprite');
-const sourcemaps = require('gulp-sourcemaps');
+const map = require('gulp-sourcemaps');
 const htmlmin = require('gulp-htmlmin');
 const notify = require('gulp-notify');
 const imageWebp = require('gulp-webp');
@@ -15,30 +15,22 @@ const ttf2woff = require('gulp-ttf2woff')
 const ttf2woff2 = require('gulp-ttf2woff2')
 const sass = require('gulp-sass')(require('sass'));
 
-
 //clean dist directory
 const clean = () => {
   return del('dist/*')
 }
 
-// sass
-const stylesSass = () => {
-  return src('./src/styles/scss/main.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(dest('./src/styles'))
-    .pipe(browserSync.stream());
-}
-
 // styles
 const styles = () => {
-  return src(['./src/styles/normalize.css', './src/styles/**/*.css'])
-    .pipe(sourcemaps.init())
+  return src('./src/styles/scss/main.scss')
+    .pipe(map.init())
+    .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
       cascade: false,
     }))
     .pipe(cleanCSS({ level: 2 }))
-    .pipe(concat('main.css'))
-    .pipe(sourcemaps.write('.'))
+    .pipe(concat('main.min.css'))
+    .pipe(map.write('.'))
     .pipe(dest('./dist/css/'))
     .pipe(browserSync.stream());
 };
@@ -46,13 +38,13 @@ const styles = () => {
 //scripts
 const scripts = () => {
   return src('./src/scripts/**/*.js')
-    .pipe(sourcemaps.init())
+    .pipe(map.init())
     .pipe(babel({
       presets: ['@babel/env']
     }))
-    .pipe(concat('main.js'))
+    .pipe(concat('main.min.js'))
     .pipe(uglify().on("error", notify.onError()))
-    .pipe(sourcemaps.write('.'))
+    .pipe(map.write('.'))
     .pipe(dest('./dist/js'))
     .pipe(browserSync.stream());
 }
@@ -104,8 +96,7 @@ const watchFiles = () => {
     },
   });
 
-  watch('./src/styles/scss/**/*.scss', stylesSass);
-  watch('./src/styles/**/*.css', styles);
+  watch('./src/styles/scss/**/*.scss', styles);
   watch('./src/*.html', html);
   watch('./src/scripts/**/*.js', scripts);
   watch('./src/resources/**', resources);
@@ -140,7 +131,6 @@ const convertTtfWoff2 = () => {
     .pipe(browserSync.stream());
 }
 
-exports.stylesSass = stylesSass;
 exports.styles = styles;
 exports.html = html;
 exports.scripts = scripts;
@@ -151,4 +141,4 @@ exports.svgSprites = svgSprites;
 exports.convertTtfWoff = convertTtfWoff;
 exports.convertTtfWoff2 = convertTtfWoff2;
 
-exports.default = series(clean, scripts, stylesSass, styles, resources, images, imagesOther, svgSprites, convertTtfWoff, convertTtfWoff2, html, watchFiles);
+exports.default = series(clean, scripts, styles, resources, images, imagesOther, svgSprites, convertTtfWoff, convertTtfWoff2, html, watchFiles);
